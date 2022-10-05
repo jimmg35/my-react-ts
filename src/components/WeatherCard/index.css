@@ -1,0 +1,46 @@
+.WeatherCard{
+    width: 400px;
+    height: 220px;
+    background-color: #9166F1;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.Head{
+    flex: 0.5;
+    display: flex;
+    justify-content: space-between;
+}
+.Calendar{
+    flex: 0.5;
+    background-color: cadetblue;
+}
+
+.Temperature{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Location{
+    margin: 0px;
+    font-size: 18px;
+    font-weight:400;
+}
+.TemperatureNumber{
+    margin: 0px;
+    font-size: 30px;
+    font-weight:400;
+    letter-spacing: 4px;
+}
+.Date{
+    margin: 0px;
+    font-size: 14px;
+    font-weight:100;
+}
+
+.Pics{
+}

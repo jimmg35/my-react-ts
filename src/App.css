@@ -1,0 +1,9 @@
+.App{
+  /* width: 100vw; */
+  /* height: fit-content; */
+  /* min-width: 100vh; */
+  background-color: #d6eaff;
+  width: 100vw;
+  height: 100vh;
+  padding: 16px;
+}

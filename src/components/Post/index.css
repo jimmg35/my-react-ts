@@ -1,0 +1,8 @@
+.Post{
+    width: 590px;
+    height: fit-content;
+    min-height: 260px;
+    background-color: #242526;
+    margin-top: 18px;
+    border-radius: 8px;
+}

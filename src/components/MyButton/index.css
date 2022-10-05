@@ -1,0 +1,22 @@
+.MyButton{
+    width: fit-content;
+    height: fit-content;
+    border: solid 2px #007FFF;
+    margin: 20px;
+    border-radius: 8px;
+    font-size: 28px;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.MyButton:hover{
+    background-color: #007FFF;
+    color: white;
+    transition: 0.2s;
+}
+
+.MyButton.selected{
+    background-color: #007FFF;
+    color: white;
+}
