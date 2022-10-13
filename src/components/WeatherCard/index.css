@@ -1,7 +1,7 @@
 .WeatherCard{
     width: 400px;
     height: 220px;
-    background-color: #9166F1;
+    background-color: #66d7f1;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,9 @@
 }
 .Calendar{
     flex: 0.5;
-    background-color: cadetblue;
+    background-color: rgb(184, 214, 215);
+    display: flex;
+
 }
 
 .Temperature{
@@ -41,6 +43,10 @@
     font-size: 14px;
     font-weight:100;
 }
-
-.Pics{
+.DayChip{
+    width: 50px;
+    height: 90px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
 }
