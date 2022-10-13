@@ -16,7 +16,9 @@
 }
 .Calendar{
     flex: 0.5;
-    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .Temperature{
@@ -43,4 +45,22 @@
 }
 
 .Pics{
+}
+
+.DayChip{
+    width: 50px;
+    height: 70px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.WeatherIcon{
+    width: 30px;
+    height: 30px;
+}
+.WeatherTemp{
+    font-size: 12px;
 }

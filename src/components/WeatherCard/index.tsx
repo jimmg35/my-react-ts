@@ -1,14 +1,50 @@
 import './index.css'
 import rain from '../../assets/rain.png'
+import rainIcon from '../../assets/rainIcon.png'
+
+interface IElement {
+  description: string
+  time: {
+    startTime: string
+    endTime: string
+    elementValue: {
+      value: string
+      measures: string
+    }[]
+  }[]
+}
+
+interface IData {
+  locationName: string
+  weatherElement: IElement[]
+}
+
+interface ILocation {
+  locations: {
+    datasetDescription: string
+    locationsName: string
+    dataid: string
+    location: IData[]
+  }[]
+}
+
+interface IWeatherResult {
+  records: ILocation
+  success: string
+}
 
 const fetchData = async () => {
-
-
   const response = await fetch("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=rdec-key-123-45678-011121314")
-  const responseContent = await response.json()
-  console.log(responseContent)
-  // .then(result => console.log(result))
-  // .catch(error => console.log('error', error));
+  const responseContent = await response.json() as IWeatherResult
+  const tempData = responseContent.records.locations.at(0)
+  if (tempData !== undefined) {
+    const countyNames: string[] = []
+    for (let i = 0; i < tempData.location.length; i++) {
+      const countyName = tempData.location[i].locationName
+      countyNames.push(countyName)
+    }
+    return countyNames
+  }
 }
 
 fetchData()
@@ -34,7 +70,42 @@ const WeatherCard = () => {
       </div>
 
       <div className='Calendar'>
-        <p>calendar</p>
+
+        <div className='DayChip'>
+          <img src={rainIcon} className='WeatherIcon' />
+          <span className='WeatherTemp'>18°C</span>
+        </div>
+
+        <div className='DayChip'>
+          <img src={rainIcon} className='WeatherIcon' />
+          <span className='WeatherTemp'>18°C</span>
+        </div>
+
+        <div className='DayChip'>
+          <img src={rainIcon} className='WeatherIcon' />
+          <span className='WeatherTemp'>18°C</span>
+        </div>
+
+        <div className='DayChip'>
+          <img src={rainIcon} className='WeatherIcon' />
+          <span className='WeatherTemp'>18°C</span>
+        </div>
+
+        <div className='DayChip'>
+          <img src={rainIcon} className='WeatherIcon' />
+          <span className='WeatherTemp'>18°C</span>
+        </div>
+
+        <div className='DayChip'>
+          <img src={rainIcon} className='WeatherIcon' />
+          <span className='WeatherTemp'>18°C</span>
+        </div>
+
+        <div className='DayChip'>
+          <img src={rainIcon} className='WeatherIcon' />
+          <span className='WeatherTemp'>18°C</span>
+        </div>
+
       </div>
 
     </div>
